@@ -32,5 +32,13 @@ public class Baza
 		}
     }
 
-	
+	public int getPaloPrimeraCartaDeLaBaza()
+	{
+		int posicion = -1;
+		posicion = baza[0].getPalo();
+		return posicion;
+	}
+
+    public void cartaQueVaGanandoLaBaza()
+	{}
 }

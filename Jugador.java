@@ -42,7 +42,7 @@ public class Jugador
     {
         for(Carta cartaActual : cartas){
            if(cartaActual != null){
-            System.out.println(cartaActual);
+            	System.out.println(cartaActual);
            }
         }
     }
