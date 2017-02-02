@@ -57,9 +57,29 @@ public class Baza
             }   
         }
         return cartaQueGana;
+    }
+
+    public String nombreJugadorQueVaGanandoLaBaza ()
+    {
+        Carta cartaQueGana = null;
+        String nombreJugador = null;
+        int contador = 0;
+        int posicionJugador = 0;
+        if(baza[contador] != null){
+            cartaQueGana = baza[contador];
+            posicionJugador = contador;
+            contador++;
+            while(contador < baza.length){
+                if(cartaQueGana.ganaA(baza[contador], paloQuePinta)){
+                    cartaQueGana = baza[contador];
+                    posicionJugador = contador;
+                    contador++;
+                }
+                contador++;
+            }   
         }
-        
-        
-       
+        nombreJugador = nombresJugadores[posicionJugador];
+        return nombreJugador;
+    }  
 }
 
